@@ -1,1 +1,0 @@
-const selectTheme = document.getElementById('theme')

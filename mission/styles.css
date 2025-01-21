@@ -9,6 +9,15 @@
         font-family: "Times New Roman", Times, serif;
     }
 
+    .dark {
+        background-color: #333;
+        color: white;
+    }
+
+    .dark #subtitle {
+        color: #A0D4ED;
+    }
+
     #daline {
         background-color: #ccc;
         width: 600px;
