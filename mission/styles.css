@@ -9,6 +9,14 @@
         font-family: "Times New Roman", Times, serif;
     }
 
+    #daline {
+        background-color: #ccc;
+        width: 600px;
+        margin-top: 0;
+        border: none;
+        height: 0.5px;
+    }
+
     #subtitle, #first-paragraph, #italics-bit, .mission-objectives {
         font-size:20px;    
         margin: 0 auto;
@@ -30,6 +38,7 @@
         color:#006EB6;
         letter-spacing: 2px;
         text-align: center;
+        font-weight: normal;      
     }
 
     #first-paragraph {
