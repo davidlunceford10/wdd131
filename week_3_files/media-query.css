@@ -22,9 +22,6 @@ section {
     
 }
 
-#thumbnail {
-    width: 100px;
-}
 
 @media screen and (min-width: 500px){
     header {
