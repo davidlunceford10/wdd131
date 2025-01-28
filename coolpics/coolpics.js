@@ -4,3 +4,4 @@ document.getElementById('menu').addEventListener('click', function () {
     links.style.display = (links.style.display === 'flex' ? 'none' : 'flex');
   });
   
+// aided by ChatGPT
