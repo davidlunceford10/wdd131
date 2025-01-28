@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: Mooli, sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: var(--primary-font);
+  overflow-x: hidden;
+}
+
+header {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 8%;
+}
+
+#site-title {
+  font-family: var(--secondary-font);
+  color: var(--text-light);
+  font-size: 10vw;
+  margin: 0;
+}
+
+#menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: var(--text-light);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#links {
+  display: flex;
+  justify-content: space-around;
+  padding: 5%;
+  flex-wrap: wrap;
+}
+
+#links a {
+  font-family: var(--primary-font);
+  color: var(--text-light);
+  font-size: 3vw;
+  text-align: center;
+}
+
+#links a:visited {
+  color: var(--accent-color);
+}
+
+#links a:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+#body-title {
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-size: 6vw;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;
+  max-width: 100%;
+}
+
+figure.card {
+  background-color: white;
+  border: 2px solid #ddd;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 7px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+}
+
+figure.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+footer {
+  background-color: var(--primary-color);
+  padding: 3%;
+  color: var(--text-light);
+  text-align: center;
+  font-family: var(--primary-font);
+}
+
+@media (max-width: 600px) {
+  #links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #links a {
+    width: 100%;
+    font-size: 5vw;
+    padding: 15px 0;
+  }
+
+  #site-title {
+    font-size: 15vw;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110%;
+    margin-top: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #site-title {
+    font-size: 8vw;
+  }
+
+  #menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #site-title {
+    font-size: 4vw;
+  }
+
+  #links a {
+    font-size: 2vw;
+  }
+}
