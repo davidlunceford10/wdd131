@@ -85,3 +85,12 @@ body, html {
 .skiptocontent a:focus {
     top: 0;
 }
+
+#date1 {
+    font-size: 1.1rem;
+}
+
+#date2 {
+    font-size: 1.1rem;
+}
+
