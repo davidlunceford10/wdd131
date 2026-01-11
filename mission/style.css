@@ -1,0 +1,50 @@
+#content {
+    border: 1px solid lightgray;
+    /* syntax for padding: Trouble- TRBL, top right bottom left */
+    padding: 4% 1% 5% 1%;
+    width: 40%;
+    margin: 5% auto;
+
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-weight: 547;
+    letter-spacing: .1rem;
+}
+
+h3 {
+    color: rgb(24, 140, 179);
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 75%;
+    margin-bottom: 2px;
+    font-weight: 500;
+    letter-spacing: .1rem;
+}
+
+#main-text {
+    width: 67%;
+    margin: 0 auto;
+}
+
+img {
+    width: 17%;
+    display: block;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    margin-top: 0%;
+    width: 67%;
+    border: 0;
+    border-top: .01rem solid rgb(197, 197, 197);
+    
+}
+
+ol li {
+    margin-bottom: 3%;
+}
