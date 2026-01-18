@@ -48,3 +48,8 @@ hr {
 ol li {
     margin-bottom: 3%;
 }
+
+
+.dark-mode {
+    color: white;
+}
