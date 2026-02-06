@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+}
+
+.main-nav {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    justify-content: right;
+    border-top: 2px solid rgb(245, 191, 30);
+    border-bottom: 2px solid rgb(245, 191, 30);
+}
+.main-nav li {
+    padding: 8px;
+}
+.main-nav a {
+    text-decoration: none;
+    color: red;
+}
+
+
+
+.book-review-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.book-metadata {
+    grid-column: 2/3;
+    
+}
+
+.book-review {
+    grid-column: 1/2;
+}
+
+body > footer {
+    border-top: 2px solid rgb(245, 191, 30);
+}
+
+body > footer > p {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+
+}
