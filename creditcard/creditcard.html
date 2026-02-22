@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Form</title>
+    <meta name="description" content="A site showcasing the use of html forms">
+    <meta name="author" content="David Lunceford">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="creditcard.css">
+    <script src="creditcard.js" defer></script>
+</head>
+<body>
+    <form id="form-grid" action="#" method="GET">
+        <div id="card-front-grid"> 
+            <div id="main-card-deets">
+                <p id="total-199">TOTAL: $199</p>
+
+                <label id="credit-card-label" for="creditCardNumber">CARD NUMBER</label> 
+                <input
+                type="tel"
+                id="creditCardNumber"
+                name="creditCardNumber"
+                placeholder="1234 5678 9101 1020"
+                maxlength="19"
+                autocomplete="cc-number"
+                aria-labelledby="credit-card-label"
+                required
+                > 
+
+                <label id="card-holder-label" for="cardHolder">CARD HOLDER</label> 
+                <input 
+                type="text" 
+                name="cardHolder" 
+                id="cardHolder"
+                placeholder="John Doe"
+                autocomplete="cc-name"
+                aria-labelledby="card-holder-label"
+                required
+                > 
+            </div>
+
+            <p id="chip">💳</p>
+
+            <div id="cardExpiration">
+                <label id="expirationDate">EXPIRATION</label>
+                <input 
+                type="tel" 
+                id="month" 
+                name="expMonth" 
+                placeholder="MM"
+                maxlength="2"
+                autocomplete="cc-exp-month"
+                aria-labelledby="expirationDate"
+                required
+                >
+                <input 
+                type="tel" 
+                id="year" 
+                name="expYear" 
+                placeholder="YY"
+                maxlength="2"
+                autocomplete="cc-exp-year"
+                aria-labelledby="expirationDate"
+                required
+                >
+            </div>
+        </div>
+
+        <div id="card-back-grid">
+            <div id="magnetic-strip"></div>
+            <label id="cvc-label" for="cvcCvv">CVC/CVV</label>
+            <input 
+            type="tel"
+            id="cvcCvv"
+            name="cvcCvv"
+            placeholder="xxx"
+            maxlength="3"
+            autocomplete="off"
+            aria-labelledby="cvc-label"
+            required
+            >
+        </div>  
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+<!-- https://davidlunceford10.github.io/wdd131/creditcard/creditcard.html -->

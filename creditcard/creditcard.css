@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Space Mono', monospace;
+}
+
+
+#form-grid {
+  display: grid;
+  grid-template-columns: 16px 1fr 120px 16px;
+  grid-template-rows: 16px auto auto auto 60px;
+  width: 540px;
+  background-color: #ffffff;
+}
+
+
+#card-front-grid {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: auto auto auto;
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+  z-index: 2;
+  background-color: #d0cece;
+  border-radius: 14px;
+  padding: 20px;
+  gap: 10px;
+  min-height: 220px;
+}
+
+
+#main-card-deets {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  gap: 6px;
+  align-content: space-between;
+}
+
+#total-199 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.03em;
+}
+
+
+#chip {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  font-size: 26px;
+  text-align: right;
+  align-self: start;
+}
+
+
+#cardExpiration {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-column: 2 / 3;
+  grid-row: 3;
+  align-self: end;
+  justify-content: end;
+  gap: 4px;
+}
+
+#expirationDate {
+  grid-column: 1 / -1;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+#month,
+#year {
+  width: 44px;
+}
+
+
+#card-back-grid {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  grid-template-rows: 50px 1fr auto auto;
+  grid-column: 2 / 5;
+  grid-row: 2 / 5;
+  z-index: 1;
+  background-color: #c0bebe;
+  border-radius: 14px;
+  padding: 0;
+  gap: 6px;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+
+#magnetic-strip {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  background-color: #1a1a1a;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+
+#cvc-label {
+  grid-column: 2 / 3;
+  grid-row: 3;
+  align-self: end;
+  padding-right: 16px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+#cvcCvv {
+  grid-column: 2 / 3;
+  grid-row: 4;
+  width: 70px;
+  justify-self: start;
+  margin-left: 8px;
+  margin-bottom: 16px;
+}
+
+
+label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+
+input {
+  background-color: #ffffff;
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #111111;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: #888888;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.08);
+}
+
+input::placeholder {
+  color: #aaaaaa;
+  font-size: 11px;
+}
+
+
+button[type="submit"] {
+  grid-column: 3 / 5;
+  grid-row: 5;
+  align-self: center;
+  justify-self: end;
+  background-color: #ffffff;
+  color: #111111;
+  border: 1px solid #bbbbbb;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background-color: #f0f0f0;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.97);
+}
