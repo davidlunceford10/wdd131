@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Card - Swamp Beast Diplomat</title>
+  <meta name="description" content="An interactive RPG character card featuring the Swamp Beast Diplomat.">
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Character Card - Swamp Beast Diplomat">
+  <meta property="og:description" content="An interactive RPG character card featuring the Swamp Beast Diplomat.">
+  <meta property="og:url" content="https://githubusername.github.io/wdd131/charactercard">
+  <meta property="og:image" content="https://githubusername.github.io/wdd131/charactercard/images/social-preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Character Card - Swamp Beast Diplomat">
+  <meta name="twitter:description" content="An interactive RPG character card featuring the Swamp Beast Diplomat.">
+  <meta name="twitter:image" content="https://githubusername.github.io/wdd131/charactercard/images/social-preview.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="card">
+    <img class="image" src="snortleblat.webp" alt="Swamp Beast Diplomat character portrait">
+    <div class="name" id="character-name"></div>
+    <div class="stats">
+      <p>Class: <span id="character-class"></span></p>
+      <p>Level: <span id="character-level"></span></p>
+      <p>Health: <span id="character-health"></span></p>
+    </div>
+    <div class="buttons">
+      <button id="attack-btn">⚔️ Attack</button>
+      <button id="levelup-btn">⬆️ Level Up</button>
+    </div>
+    <p id="status-message"></p>
+  </div>
+
+  <script src="character.js"></script>
+</body>
+</html>
