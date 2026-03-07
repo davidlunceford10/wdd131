@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:description" content="A collection of delicious recipes">
+    <meta property="og:url" content="Your URL">
+    <meta property="og:image" content="images/recipe-book.png">
+    <!-- X Card -->
+    <meta name="twitter:card" content="Social Preview Image">
+    <meta name="twitter:title" content="Recipe Book">
+    <meta name="twitter:description" content="A collection of delicious recipes">
+    <meta name="twitter:image" content="images/recipe-book.png">
+    <!-- One favicon (ICO works everywhere) -->
+    <link rel="icon" href="/favicon.ico">
+    <!-- One Apple Touch Icon (iOS home screen) -->
+    <link rel="apple-touch-icon" href="images/recipe-book.png">
+    <title>Recipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="recipes.js" defer></script>
+</head>
+<body>
+
+<div id="title-flexbox">
+    <img src="images/recipe-book.png" alt="Recipe book logo">
+    <h1>RECIPEBOOK</h1>
+</div>
+
+<div class="search-area">
+  <input type="text" placeholder="Find a recipe">
+  <button><img src="images/search.svg" alt="search icon"></button>
+</div>
+
+<hr>
+
+<div id="recipe-flexbox">
+
+    <img src="images/apple-crisp.jpg" alt="Picture of Apple Crisp dessert">
+
+    <div id="convenient-flexbox">
+
+        <span class="recipe-tag">dessert</span>
+
+        <h2 id="recipe-title">Apple Crisp</h2>
+
+        <span
+          class="rating"
+          role="img"
+          aria-label="Rating: 4 out of 5 stars"
+        >
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star-empty">☆</span>
+        </span>
+
+        <p id="recipe-description"></p>
+
+    </div>
+
+</div>
+
+</body>
+<footer id="footer-box">
+    <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    <div class="social">
+    <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+    <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+    <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+    <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+    </div>
+</footer>
+</html>

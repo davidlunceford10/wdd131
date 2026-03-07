@@ -1,0 +1,196 @@
+/* TITLE */
+#title-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#title-flexbox > img {
+    width: 7rem;
+}
+
+#title-flexbox > h1 {
+    font-size: 5rem;
+}
+
+h1, h2, h3 {
+  font-family: "Amatic SC", sans-serif;
+}
+
+
+/* SEARCH BOX */
+.search-area {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.search-area input {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  background: transparent;
+}
+
+.search-area button {
+  position: relative;
+  padding: .5rem 1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.search-area button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: gray;
+  pointer-events: none;
+}
+
+.search-area button img {
+  width: 20px;
+  height: 20px;
+}
+
+.search-area input:focus {
+    outline: none;
+}
+
+
+/* HR */
+hr {
+    width: 40%;
+    margin: 1rem auto;
+}
+
+
+/* RECIPE CARD */
+#recipe-flexbox {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#recipe-flexbox > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0.75rem;
+    box-sizing: border-box;
+}
+
+/* Text content wrapper */
+#convenient-flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 0.75rem 0.75rem;
+    gap: 0.25rem;
+}
+
+.recipe-tag {
+    border: 1px solid black;
+    padding: 0.1rem 0.4rem;
+    font-size: 0.8rem;
+    border-radius: 3px;
+}
+
+#recipe-title {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #23769a;
+}
+
+.rating {
+    font-size: 1rem;
+}
+
+#recipe-description {
+    margin: 0.25rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.hide {
+    display: none;
+}
+
+
+/* FOOTER */
+#footer-box {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+
+body > footer > div > a > img {
+    width: 32px;
+}
+
+#footer-box a {
+    font-size: 0.75rem;
+    color: #0035f6;
+}
+
+
+
+@media screen and (min-width: 700px) {
+
+    .search-area {
+        width: 55%;
+    }
+
+    hr {
+        width: 55%;
+    }
+
+   
+    #recipe-flexbox {
+        flex-direction: row;
+        width: 55%;
+        align-items: stretch;
+    }
+
+    #recipe-flexbox > img {
+        width: 45%;
+        max-width: 220px;
+        object-fit: cover;
+        padding: 0.75rem;
+        flex-shrink: 0;
+    }
+
+    #convenient-flexbox {
+        padding: 0.75rem 0.75rem 0.75rem 0.5rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    
+    #footer-box {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 55%;
+        margin: 2rem auto 0;
+    }
+}
