@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="styles/site-plan.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>FitTrack Site Plan</h1>
+			<h2>David Lunceford</h2>
+			<h2>WDD 131- A2</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+			<!-- ------------------------Steps 2-3------------------------------ -->
+			<hr />
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>FitTrack is a personal workout logging app that allows users to record, analyze, and review their workouts directly in their browser. The site doesn't require any account creation or a backend server because all the data is stored locally on the machine.  </p>
+			<!-- change this -->
+
+			<h3>Audience</h3>
+			<p>FitTrack is designed for fitness enthusiasts who work out consistently and want a lightweight tool to track their workouts without worrying about the hassle of an annoying bloated  fitness app. The website app is meant for people who are used to browsing the internet on both mobile and desktop platforms, who value simplicity, agility, and practicality in their fitness tracking.</p>
+			<!-- change this -->
+
+			<h3>Dynamic elements</h3>
+			<p>JavaScript powers the core functionality of FitTrack. When a user submits a workout
+				through the log form, a <code>logWorkout()</code> function captures the input,
+				constructs a workout <strong>object</strong> (containing date, exercise name, sets,
+				reps, and notes), and pushes it into a workouts <strong>array</strong> stored via
+				<code>localStorage</code>. A <code>renderWorkouts()</code> function uses
+				<code>forEach</code> to loop through saved workouts and dynamically build and
+				insert HTML cards into the DOM. Filtering by exercise name or date uses the
+				<code>filter()</code> array method, and a stats summary panel uses
+				<code>reduce()</code> to calculate total sets logged. Event listeners handle form
+				submission, filter input changes, and delete button clicks on each workout card.
+				Conditional branching is used to check for empty states (showing a friendly
+				"No workouts yet" message), to validate that required fields are filled before
+				saving, and to toggle between the log form and history views. The entire experience
+				is driven by DOM selection, modification, and event handling — no page reloads required.</p>
+			<!-- change this -->
+
+			<hr />
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+			<img src="images/website-logo.png" alt="Logo image" />
+			<hr/>
+			<h2>Style Guide</h2>
+
+			<!-- ------------------------Steps 4-8------------------------------ -->
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			
+			Palette URL:
+			<a href="https://coolors.co/1a1a2e-f0a500-e84545-16213e-e0e0e0" target="_blank">
+				https://coolors.co/1a1a2e-f0a500-e84545-16213e-e0e0e0
+			</a>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">#1A1A2E</td>
+						<td class="secondary">#F0A500</td>
+						<td class="accent1">#E84545</td>
+						<td class="accent2">#16213E</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!-- ------------------------Step 9------------------------------ -->
+
+			<h3>Typography</h3>
+			<!-- Choose a font for your paragraphs (body copy) and headlines. What font(s) have you chosen? Why did you choose what you did?  Make sure to review the list of web safe fonts at W3Schools.org as a starting point.  Think also about which of your colors above you might use for background and font colors. -->
+
+            <p>
+				The heading font is bold and strong to convey confidence and structure. The
+				paragraph font is clean and highly readable at small sizes for workout data.
+				Both are available via Google Fonts.
+			</p>
+
+			<h4>
+				Heading Font: Oswald (Bold, 700 weight)
+				<!-- change this -->
+			</h4>
+			<h4>
+				Paragraph Font: Source Sans 3 (Regular, 400 weight)
+				<!-- change this -->
+			</h4>
+			<h3>Normal paragraph example</h3>
+			<p>
+				Track every rep. Every set. Every session. Own it! FitTrack keeps your workout history
+				organized so you can focus on what matters: getting those sweet gains! Log your exercises,
+				browse your history, and see your totals grow over time. No accounts. No syncing.
+				Just your data, right here in your browser.
+			</p>
+			<h3>Colored paragraph example</h3>
+			<p class="colored">
+				Warning: Logging a workout is addictive. Users have reported an overwhelming urge
+				to keep their streaks alive. Proceed with discipline.
+			</p>
+
+			<!-- ------------------------Step 10------------------------------ -->
+
+			<h3>Navigation</h3>
+			<!-- Think about how you want your navigation bar to look. In the site-plan.css file change the colors to your colors to get the look you desire. -->
+			<nav>
+				<a href="#">Home</a>
+				<a href="#">Log Workout and Workout History</a>
+				
+			</nav>
+			<hr />
+
+			<h2>Content</h2>
+			<h3>Home page</h3>
+			<p>
+				The home page serves as the landing screen for FitTrack. It includes:
+			</p>
+			<ul>
+				<li>A hero section with the FitTrack logo, a tagline ("Log it. Track it. Own it."), and a prominent "Log a Workout" call-to-action button.</li>
+				<li>A brief "How it works" section with three steps: Log → Review → Improve, each illustrated with a simple icon.</li>
+				<li>A live stats bar pulled dynamically from localStorage: total workouts logged, total sets completed, and most frequently logged exercise.</li>
+				<li>A preview of the three most recent workouts, rendered as cards by JavaScript.</li>
+			</ul>
+			<p><strong>Images needed:</strong> FitTrack logo, 3 simple icon graphics (dumbbell, list/clipboard, chart/arrow-up).</p>
+
+			<h3>Log &amp; History Page (log.html)</h3>
+			<p>
+				This child page contains two main sections toggled by JavaScript:
+			</p>
+			<ul>
+				<li>
+					<strong>Log Form:</strong> A form where the user enters the workout date,
+					exercise name (e.g. "Bench Press"), number of sets, reps per set, weight
+					used (lbs), and optional notes. On submit, the entry is saved to
+					<code>localStorage</code> and a success message is shown.
+				</li>
+				<li>
+					<strong>Workout History:</strong> A filterable list of all logged workouts
+					displayed as cards. Each card shows the date, exercise, sets × reps, weight,
+					and notes. A search/filter input lets users filter by exercise name. A delete
+					button on each card removes that entry from localStorage and re-renders the list.
+				</li>
+			</ul>
+			<p><strong>Sample data to pre-populate for demo purposes:</strong></p>
+			<pre>
+[
+  { date: "2025-03-10", exercise: "Squat",       sets: 4, reps: 8, weight: 185, notes: "Felt strong today" },
+  { date: "2025-03-11", exercise: "Bench Press",  sets: 4, reps: 6, weight: 155, notes: "Slight shoulder tightness" },
+  { date: "2025-03-12", exercise: "Deadlift",     sets: 3, reps: 5, weight: 225, notes: "" },
+  { date: "2025-03-13", exercise: "Pull-ups",     sets: 3, reps: 10, weight: 0,  notes: "Bodyweight" },
+  { date: "2025-03-14", exercise: "Overhead Press", sets: 3, reps: 8, weight: 95, notes: "" }
+]
+			</pre>
+
+			<h2>Wireframes</h2>
+
+			<h3>Home Page Wireframe</h3>
+			<p>
+				The home page follows a single-column mobile-first layout:
+				top nav bar → hero (logo + tagline + CTA button) → stats bar (3 numbers side by side)
+				→ "How It Works" three-step row → recent workouts card grid (stacks on mobile, 3-col on desktop).
+			</p>
+			</p>
+			<img src="images/fittrack_home_wireframe.svg" alt="home page wireframe" />
+			<img src="images/fittrack_log_wireframe.svg" alt="page 2 wireframe" />
+		</main>
+	</body>
+</html>
