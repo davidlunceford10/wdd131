@@ -1,0 +1,17 @@
+JavaScript powers the core functionality of FitTrack. When a user submits a workout
+				through the log form, a <code>logWorkout()</code> function captures the input,
+				constructs a workout <strong>object</strong> (containing date, exercise name, sets,
+				reps, and notes), and pushes it into a workouts <strong>array</strong> stored via
+				<code>localStorage</code>. A <code>renderWorkouts()</code> function uses
+				<code>forEach</code> to loop through saved workouts and dynamically build and
+				insert HTML cards into the DOM. Filtering by exercise name or date uses the
+				<code>filter()</code> array method, and a stats summary panel uses
+				<code>reduce()</code> to calculate total sets logged. Event listeners handle form
+				submission, filter input changes, and delete button clicks on each workout card.
+				Conditional branching is used to check for empty states (showing a friendly
+				"No workouts yet" message), to validate that required fields are filled before
+				saving, and to toggle between the log form and history views. The entire experience
+				is driven by DOM selection, modification, and event handling — no page reloads required
+
+
+				html css validators, check lighthouse, make sure you have your meta og tags (check the announcement), your meta tags and your favicon CHECK THE RUBRIC 
