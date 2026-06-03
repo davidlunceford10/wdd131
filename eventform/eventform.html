@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="A showcase of html forms.">
+    <meta name="author" content="David Lunceford">              
+    <title>Event Form</title>
+    <link rel="stylesheet" href="eventform.css">
+    <script defer src="eventform.js"></script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <form id="event-form">
+            <div class="field">
+            <label for="firstName">First Name</label>
+            <input id="firstName" name="firstName" type="text" required />
+        </div>
+
+        <div class="field">
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="lastName" type="text" required />
+        </div>
+
+        <div class="field full">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="field">
+            <label for="type">Type</label>
+            <select
+            id="ticketType"
+            name="ticket-type"
+            aria-controls="ticket-type"
+            required
+            >
+                <option value="">Choose one</option>
+                <option value="one">Student</option>
+                <option value="many">Guest</option>
+            </select>
+
+            <div class="field">
+            <label for="date">Event Date</label>
+            <input id="event-date" name="event-date" type="date" required />
+      </div>
+      </div>
+
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
