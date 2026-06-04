@@ -7,63 +7,45 @@
     <meta name="author" content="David Lunceford">              
     <title>Event Form</title>
     <link rel="stylesheet" href="eventform.css">
-    <script defer src="eventform.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script defer src="eventform.js"></script>
 </head>
 <body>
-    <header>
-
-    </header>
+    <header></header>
     <main class="wrapper">
         <form id="event-form">
             <div class="field">
-            <label for="firstName">First Name</label>
-            <input id="firstName" name="firstName" type="text" required />
-        </div>
-
-        <div class="field">
-            <label for="lastName">Last Name</label>
-            <input id="lastName" name="lastName" type="text" required />
-        </div>
-
-        <div class="field full">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-        </div>
-
-        <div class="field">
-            <label for="type">Type</label>
-            <select
-            id="ticketType"
-            name="ticket-type"
-            aria-controls="ticket-type"
-            required
-            >
-                <option value="">Choose one</option>
-                <option value="one">Student</option>
-                <option value="many">Guest</option>
-            </select>
-      </div>
-
-      <div class="field">
-            <label for="date">Event Date</label>
-            <input id="event-date" name="event-date" type="date" required />
-      </div>
-
-      <div class="field full" id="extra-field" style="display: none;">
-        <label id="extra-label" for="extra-input">Student I#</label>
-        <input id="extra-input" name="extra-input" type="text" />
-    </div>
-
-
-      <button class=" field full" type="submit">Create Ticket</button>
-      </div>
-
-    </form>
-    <div id="output"></div>
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="firstName" type="text" required />
+            </div>
+            <div class="field">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" type="text" required />
+            </div>
+            <div class="field full">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+            </div>
+            <div class="field">
+                <label for="ticketType">Type</label>
+                <select id="ticketType" name="ticket-type" required>
+                    <option value="">Choose one</option>
+                    <option value="one">Student</option>
+                    <option value="many">Guest</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="event-date">Event Date</label>
+                <input id="event-date" name="event-date" type="date" required />
+            </div>
+            <div class="field full" id="extra-field" style="display: none;">
+                <label id="extra-label" for="extra-input">Student I#</label>
+                <input id="extra-input" name="extra-input" type="text" />
+            </div>
+            <button class="field full" type="submit">Create Ticket</button>
+        </form>
+        <div id="output"></div>
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
 </body>
 </html>
