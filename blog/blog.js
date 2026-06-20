@@ -46,21 +46,26 @@ const bookList = document.querySelector('#book-reviews-list');
 articles.forEach(article => {
   const book = document.createElement('article');
   book.className = 'book';
+  buildArticle(book, article);   
+  appendArticle(book);          
+});
 
+function buildArticle(book, article) {
   book.innerHTML = `
-    <div class="book-metadata">
+    <section class="book-metadata">
       <p><em>${article.date}</em></p>
       <p>Ages: ${article.ages}</p>
       <p>Genre: ${article.genre}</p>
       <p>${article.stars}</p>
-    </div>
-
-    <div class="book-review">
+    </section>
+    <section class="book-review">
       <h2>${article.title}</h2>
       <img src="${article.imgSrc}" alt="${article.imgAlt}">
       <p>${article.description}</p>
-    </div>
+    </section>
   `;
+}
 
+function appendArticle(book) {
   bookList.appendChild(book);
-});
+}

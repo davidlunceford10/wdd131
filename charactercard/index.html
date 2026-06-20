@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Card - Swamp Beast Diplomat</title>
+  <meta name="description" content="An interactive RPG character card featuring the Swamp Beast Diplomat.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Character Card - Swamp Beast Diplomat">
+  <meta property="og:description" content="An interactive RPG character card featuring the Swamp Beast Diplomat.">
+  <meta property="og:url" content="https://davidlunceford10.github.io/wdd131/charactercard">
+  <meta property="og:image" content="https://davidlunceford10.github.io/wdd131/charactercard/images/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Character Card - Swamp Beast Diplomat">
+  <meta name="twitter:description" content="An interactive RPG character card featuring the Swamp Beast Diplomat.">
+  <meta name="twitter:image" content="https://davidlunceford10.github.io/wdd131/charactercard/images/social-preview.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <article class="card">
+      <img class="image" src="snortleblat.webp" alt="Swamp Beast Diplomat character portrait">
+      <h1 class="name" id="character-name"></h1>
+      <section class="stats" aria-label="Character statistics">
+        <p>Class: <span id="character-class"></span></p>
+        <p>Level: <span id="character-level"></span></p>
+        <p>Health: <span id="character-health"></span></p>
+      </section>
+      <div class="buttons">
+        <button id="attack-btn" aria-label="Attack character">Attacked</button>
+        <button id="levelup-btn" aria-label="Level up character">Level Up</button>
+      </div>
+      <p id="status-message" aria-live="polite"></p>
+    </article>
+  </main>
+  <script src="character.js"></script>
+</body>
+</html>
+
+<!-- https://davidlunceford10.github.io/wdd131/charactercard/index.html -->

@@ -31,7 +31,6 @@ h2 {
 
 .book {
   display: grid;
-  grid-template-columns: 1fr 2fr;
   padding: 1.7rem 0;
   
 }
@@ -62,3 +61,62 @@ body > footer > p {
 
 
 
+@media screen and (min-width: 600px) {
+    h1 {
+        text-align: center;
+        font-family: 'Serif', 'Times New Roman', Times, serif;
+        font-weight: bold;
+        color: rgb(64, 26, 64);
+    }
+
+    h2 {
+        font-family: Serif;
+        color: #8B0000;
+    }
+
+    .main-nav {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        justify-content: right;
+        border-top: 2px solid rgb(245, 191, 30);
+        border-bottom: 2px solid rgb(245, 191, 30);
+    }
+    .main-nav li {
+        padding: 8px;
+    }
+    .main-nav a {
+        text-decoration: none;
+        color: #8B0000;
+        
+    }
+
+
+    .book {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 1.7rem 0;
+    
+    }
+
+    .book-metadata {
+        text-align: right;
+        padding-right: 10%;
+        
+    }
+
+    .book-review {
+        width: 60%;
+        border-left: 2px solid rgb(245, 191, 30);
+        padding-left: 1.5rem;
+    }
+
+
+    body > footer {
+        border-top: 1px solid rgb(245, 191, 30);
+        border-bottom: 2px solid rgb(245, 191, 30);
+        margin-bottom: 5rem;
+        
+    }
+}
