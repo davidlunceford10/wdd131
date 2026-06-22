@@ -1,8 +1,16 @@
-nums = [12, 10, 8, 3]
+nums = [12, 10, 8, 3];
 
 console.log(nums.sort(compareFn));
 
 
+function compareFn(a,b) {
+  if (a < b) {
+    return -1;
+  } else if (a > b) {
+    return 1;
+  }
+ return 0;
+}
 
 
 const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
@@ -11,8 +19,8 @@ let simpleSort = simpleList.sort();
 
 console.log(simpleSort);
 
-let lowerList = simpleList.map(function(fruit){
-    return fruit.toLowerCase();
+let lowerList = simpleList.map(function(fruit) {
+  return fruit.toLowerCase();
 })
 
 let lowerSort = lowerList.sort();
@@ -23,17 +31,13 @@ let searchTerm = 'co';
 let filterFruit = lowerSort.filter(searchFruit);
 
 function searchFruit(item){
-    return item.includes(searchTerm);
+  return item.includes(searchTerm);
 }
+
+// .includes() checks to see if a value exists in a String.
 
 console.log(filterFruit);
 
-
-
-
-
-
-// Converting strings to numbers. With objects and numbers you always need this compare function.
 function compareFn(a,b) {
   if (a.productName < b.productName) {
     return -1;
@@ -57,11 +61,10 @@ const products = [
     price: 39.99
   }
 ];
-                
+
 let productSort = products.sort(compareFn);
 
 console.log(productSort);
-
 
 
 const animals = [
@@ -91,22 +94,19 @@ let query = 'ox';
 
 let filteredList = animals.filter(searchList);
 
-function searchList(item) {
-    return item.name.toLowerCase().includes(query.toLowerCase());
+function searchList(item){
+  return item.name.toLowerCase().includes(query.toLowerCase());
 }
 
 console.log(filteredList);
-
-
-
 
 
 let queryTrait = 'strong';
 
 let filteredTraits = animals.filter(searchTraits);
 
-function searchTraits(item) {
-    return item.traits.find((trait) => trait.toLowerCase().includes(queryTrait.toLowerCase()));
+function searchTraits(item){
+  return item.traits.find((trait) => trait.toLowerCase().includes(queryTrait.toLowerCase()));
 }
 
 console.log(filteredTraits);
