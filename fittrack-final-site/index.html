@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="FitTrack is a lightweight personal workout logger. Record, review, and analyze your workouts right in your browser." />
+    <meta name="author" content="David Lunceford" />
+    <meta name="keywords" content="workout tracker, fitness log, exercise journal, gym log, personal trainer, strength training" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FitTrack — Workout Logger" />
+    <meta property="og:description" content="Log it. Track it. Own it. A lightweight personal workout logger that runs entirely in your browser." />
+    <meta property="og:image" content="images/website-logo.png" />
+    <meta property="og:url" content="https://davidlunceford10.github.io/wdd131/fittrack/" />
+    <meta property="og:site_name" content="FitTrack" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FitTrack — Workout Logger" />
+    <meta name="twitter:description" content="Log it. Track it. Own it. Track your workouts with zero accounts or syncing needed." />
+    <meta name="twitter:image" content="images/website-logo.png" />
+
+    <meta name="theme-color" content="#1A1A2E" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>FitTrack — Workout Logger</title>
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+
+  <body id="top">
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="container">
+          <a class="nav-logo" href="#top" aria-label="FitTrack Home">
+            <img src="images/website-logo.png" alt="FitTrack logo" />
+            <span>FitTrack</span>
+          </a>
+          <ul class="nav-links" role="list">
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <img class="hero-logo" src="images/website-logo.png" alt="FitTrack Workout Logger logo" />
+        <h1 id="hero-heading">FitTrack</h1>
+        <p class="hero-tagline">Log it. Track it. Own it.</p>
+        <button type="button" class="btn btn-primary" data-open-modal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+          Log a Workout
+        </button>
+      </section>
+
+      <!-- LIVE STATS BAR -->
+      <section class="stats-bar" aria-label="Your workout stats">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6.5 7v10M17.5 7v10M3 9.5v5M21 9.5v5M9 12h6"/>
+              </svg>
+            </div>
+            <div class="stat-value" id="stat-total-workouts">0</div>
+            <div class="stat-label">Workouts Logged</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <rect x="3" y="12" width="4" height="9" rx="1.5"/><rect x="10" y="6" width="4" height="15" rx="1.5"/><rect x="17" y="9" width="4" height="12" rx="1.5"/>
+              </svg>
+            </div>
+            <div class="stat-value" id="stat-total-sets">0</div>
+            <div class="stat-label">Total Sets</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2l2.9 6.26L21.5 9l-5 4.87L17.8 21 12 17.77 6.2 21l1.3-7.13L2.5 9l6.6-.74L12 2z"/>
+              </svg>
+            </div>
+            <div class="stat-value" id="stat-top-exercise" style="font-size:1rem; padding-top:0.5rem;">—</div>
+            <div class="stat-label">Top Exercise</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="how-it-works" aria-labelledby="how-heading">
+        <div class="container">
+          <h2 class="section-title" id="how-heading">How It Works</h2>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/>
+                </svg>
+              </div>
+              <h3>Log</h3>
+              <p>Enter your exercise, sets, reps, weight, and any notes. Saved instantly to your browser.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </div>
+              <h3>Review</h3>
+              <p>Browse your full workout history. Filter by exercise name to spot trends.</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/>
+                </svg>
+              </div>
+              <h3>Improve</h3>
+              <p>Watch your totals grow. Let the data motivate you to push harder each session.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORKOUTS (log + full history, all on this page) -->
+      <section class="workouts-section" aria-labelledby="workouts-heading" id="workouts">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title" id="workouts-heading" style="margin-bottom:0; text-align:left;">Your Workouts</h2>
+            <button type="button" class="btn btn-primary" data-open-modal>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+              </svg>
+              Log a Workout
+            </button>
+          </div>
+
+          <div class="history-controls">
+            <div class="search-wrap">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input
+                type="search"
+                id="filter-input"
+                placeholder="Filter by exercise name…"
+                aria-label="Filter workouts by exercise name"
+              />
+            </div>
+            <span class="history-count" id="history-count" aria-live="polite"></span>
+          </div>
+
+          <div class="workouts-list" id="workouts-list" role="list">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built by <span>David Lunceford</span> · WDD 131 · BYU-Idaho 2026</p>
+      <p style="margin-top:0.4rem;">All data stored locally in your browser.</p>
+    </footer>
+
+    <!-- WORKOUT LOG MODAL -->
+    <div class="modal-overlay" id="modal-overlay" hidden>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-header">
+          <h2 id="modal-title">New Workout</h2>
+          <button class="modal-close" id="modal-close-btn" type="button" aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div id="form-toast" class="toast" role="alert" aria-live="polite">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/><polyline points="8.5 12.5 11 15 16 9.5"/>
+            </svg>
+            <span>Workout saved successfully!</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="input-date">Date</label>
+              <input type="date" id="input-date" name="date" required aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="input-exercise">Exercise</label>
+              <input type="text" id="input-exercise" name="exercise" placeholder="e.g. Bench Press" required aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="input-sets">Sets</label>
+              <input type="number" id="input-sets" name="sets" min="1" max="99" placeholder="4" required aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="input-reps">Reps</label>
+              <input type="number" id="input-reps" name="reps" min="1" max="999" placeholder="8" required aria-required="true" />
+            </div>
+
+            <div class="form-group">
+              <label for="input-weight">Weight (lbs)</label>
+              <input type="number" id="input-weight" name="weight" min="0" step="2.5" placeholder="135" />
+            </div>
+
+            <div class="form-group full-width">
+              <label for="input-notes">Notes (optional)</label>
+              <textarea id="input-notes" name="notes" placeholder="e.g. Felt strong today, PR attempt next session…"></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" id="btn-save-workout" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Save Workout
+            </button>
+            <button class="btn btn-secondary" id="btn-clear-form" type="button">
+              Clear
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="workouts.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
