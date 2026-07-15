@@ -33,7 +33,7 @@ function updateStats() {
   if (statTopEx) statTopEx.textContent = topExercise;
 }
 
-/* ---------- Workouts list (filterable, always shows everything) ---------- */
+/* ---------- Workouts list ---------- */
 function renderWorkouts() {
   const allWorkouts = loadWorkouts();
   const filterValue = filterInput.value.trim().toLowerCase();
