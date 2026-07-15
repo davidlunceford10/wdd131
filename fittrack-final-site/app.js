@@ -1,6 +1,5 @@
 'use strict';
 
-/* ---------- Element refs ---------- */
 const statTotal = document.getElementById('stat-total-workouts');
 const statSets  = document.getElementById('stat-total-sets');
 const statTopEx = document.getElementById('stat-top-exercise');
@@ -25,7 +24,7 @@ const formToast = document.getElementById('form-toast');
 
 let lastFocusedEl = null;
 
-/* ---------- Stats ---------- */
+
 function updateStats() {
   const { totalWorkouts, totalSets, topExercise } = calcStats();
   if (statTotal) statTotal.textContent = totalWorkouts;
@@ -33,7 +32,6 @@ function updateStats() {
   if (statTopEx) statTopEx.textContent = topExercise;
 }
 
-/* ---------- Workouts list ---------- */
 function renderWorkouts() {
   const allWorkouts = loadWorkouts();
   const filterValue = filterInput.value.trim().toLowerCase();
@@ -55,7 +53,6 @@ function renderWorkouts() {
   renderWorkoutCards(workoutsList, filtered, true);
 }
 
-/* ---------- Modal ---------- */
 function setDefaultDate() {
   const today = new Date();
   const yyyy  = today.getFullYear();
@@ -111,8 +108,6 @@ function closeModal() {
   }
 }
 
-// Delegate so this also catches the empty-state "log your first one" button,
-// which doesn't exist in the DOM until it's rendered.
 document.addEventListener('click', (event) => {
   if (event.target.closest('[data-open-modal]')) {
     openModal();
@@ -125,7 +120,7 @@ modalOverlay.addEventListener('click', (event) => {
   if (event.target === modalOverlay) closeModal();
 });
 
-/* ---------- Form ---------- */
+
 function validateForm() {
   let valid = true;
 
@@ -209,7 +204,7 @@ function clearForm() {
 btnSave.addEventListener('click', logWorkout);
 btnClear.addEventListener('click', clearForm);
 
-/* ---------- Delete ---------- */
+
 function handleDeleteClick(event) {
   const btn = event.target.closest('.btn-delete');
   if (!btn) return;
