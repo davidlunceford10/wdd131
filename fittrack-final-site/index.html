@@ -6,30 +6,22 @@
     <meta name="description" content="FitTrack is a lightweight personal workout logger. Record, review, and analyze your workouts right in your browser." />
     <meta name="author" content="David Lunceford" />
     <meta name="keywords" content="workout tracker, fitness log, exercise journal, gym log, personal trainer, strength training" />
-
-    <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="FitTrack — Workout Logger" />
     <meta property="og:description" content="Log it. Track it. Own it. A lightweight personal workout logger that runs entirely in your browser." />
     <meta property="og:image" content="images/website-logo.png" />
     <meta property="og:url" content="https://davidlunceford10.github.io/wdd131/fittrack/" />
     <meta property="og:site_name" content="FitTrack" />
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="FitTrack — Workout Logger" />
     <meta name="twitter:description" content="Log it. Track it. Own it. Track your workouts with zero accounts or syncing needed." />
     <meta name="twitter:image" content="images/website-logo.png" />
-
     <meta name="theme-color" content="#1A1A2E" />
     <meta name="color-scheme" content="dark" />
-
     <title>FitTrack — Workout Logger</title>
-
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
-
   <body id="top">
     <!-- NAVBAR -->
     <header>
@@ -44,12 +36,10 @@
         </div>
       </nav>
     </header>
-
     <main>
-      <!-- HERO -->
       <section class="hero" aria-labelledby="hero-heading">
         <img class="hero-logo" src="images/website-logo.png" alt="FitTrack Workout Logger logo" />
-        <h1 id="hero-heading">FitTrack</h1>
+        <h1 id="hero-heading">FitTrack<br>Workout Logger</h1>
         <p class="hero-tagline">Log it. Track it. Own it.</p>
         <button type="button" class="btn btn-primary" data-open-modal>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
@@ -58,8 +48,6 @@
           Log a Workout
         </button>
       </section>
-
-      <!-- LIVE STATS BAR -->
       <section class="stats-bar" aria-label="Your workout stats">
         <div class="stats-grid">
           <div class="stat-card">
@@ -91,8 +79,6 @@
           </div>
         </div>
       </section>
-
-      <!-- HOW IT WORKS -->
       <section class="how-it-works" aria-labelledby="how-heading">
         <div class="container">
           <h2 class="section-title" id="how-heading">How It Works</h2>
@@ -130,8 +116,6 @@
           </div>
         </div>
       </section>
-
-      <!-- WORKOUTS (log + full history, all on this page) -->
       <section class="workouts-section" aria-labelledby="workouts-heading" id="workouts">
         <div class="container">
           <div class="section-header">
@@ -143,7 +127,6 @@
               Log a Workout
             </button>
           </div>
-
           <div class="history-controls">
             <div class="search-wrap">
               <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -158,20 +141,14 @@
             </div>
             <span class="history-count" id="history-count" aria-live="polite"></span>
           </div>
-
           <div class="workouts-list" id="workouts-list" role="list">
-            <!-- Rendered by JS -->
           </div>
         </div>
       </section>
     </main>
-
     <footer>
       <p>Built by <span>David Lunceford</span> · WDD 131 · BYU-Idaho 2026</p>
-      <p style="margin-top:0.4rem;">All data stored locally in your browser.</p>
     </footer>
-
-    <!-- WORKOUT LOG MODAL -->
     <div class="modal-overlay" id="modal-overlay" hidden>
       <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-header">
@@ -182,7 +159,6 @@
             </svg>
           </button>
         </div>
-
         <div class="modal-body">
           <div id="form-toast" class="toast" role="alert" aria-live="polite">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -190,39 +166,32 @@
             </svg>
             <span>Workout saved successfully!</span>
           </div>
-
           <div class="form-grid">
             <div class="form-group">
               <label for="input-date">Date</label>
               <input type="date" id="input-date" name="date" required aria-required="true" />
             </div>
-
             <div class="form-group">
               <label for="input-exercise">Exercise</label>
               <input type="text" id="input-exercise" name="exercise" placeholder="e.g. Bench Press" required aria-required="true" />
             </div>
-
             <div class="form-group">
               <label for="input-sets">Sets</label>
               <input type="number" id="input-sets" name="sets" min="1" max="99" placeholder="4" required aria-required="true" />
             </div>
-
             <div class="form-group">
               <label for="input-reps">Reps</label>
               <input type="number" id="input-reps" name="reps" min="1" max="999" placeholder="8" required aria-required="true" />
             </div>
-
             <div class="form-group">
               <label for="input-weight">Weight (lbs)</label>
               <input type="number" id="input-weight" name="weight" min="0" step="2.5" placeholder="135" />
             </div>
-
             <div class="form-group full-width">
               <label for="input-notes">Notes (optional)</label>
               <textarea id="input-notes" name="notes" placeholder="e.g. Felt strong today, PR attempt next session…"></textarea>
             </div>
           </div>
-
           <div class="form-actions">
             <button class="btn btn-primary" id="btn-save-workout" type="button">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -237,7 +206,6 @@
         </div>
       </div>
     </div>
-
     <script src="workouts.js"></script>
     <script src="app.js"></script>
   </body>

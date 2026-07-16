@@ -223,6 +223,6 @@ function handleDeleteClick(event) {
 workoutsList.addEventListener('click', handleDeleteClick);
 filterInput.addEventListener('input', renderWorkouts);
 
-/* ---------- Init ---------- */
+
 updateStats();
 renderWorkouts();
