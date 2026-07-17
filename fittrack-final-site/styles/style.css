@@ -196,6 +196,23 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 0.75rem;
 }
 
+.hero-logo-text .logo-fit {
+  color: var(--text-primary);
+}
+
+.hero-logo-text .logo-track {
+  color: var(--secondary);
+}
+
+.hero-logo-text .logo-sub {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.45em;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 4px;
+}
+
 .hero-tagline {
   font-size: 1.2rem;
   color: var(--text-secondary);
